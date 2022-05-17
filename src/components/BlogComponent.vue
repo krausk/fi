@@ -65,7 +65,7 @@
 import MessageComponent from './MessageComponent.vue';
 
 export default {
-    name: "BodyComponent",
+    name: "BlogComponent",
     components: {
       MessageComponent,
     },

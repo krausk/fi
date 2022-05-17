@@ -1,5 +1,5 @@
 <template>
-  <div class="mc">
+  <div class="mc-container">
     <div>August 2022<br />&nbsp;</div>
     <ul>
       <li><HeaderCalendarEntry date="Fr 05 08" title="l&l&l&family&friends"/></li>
@@ -30,7 +30,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.mc {
+.mc-container {
   background-color: rgba(164, 138, 123, 0.50);
   text-align: left;
   color: #ff0000;

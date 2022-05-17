@@ -2,16 +2,16 @@
   <div class="fc-full">
     <div class="fc-newsletter">
       Bleibe im Kontakt.<br />
-      Abonniere <a href="neu.html">[hier:]</a> unseren<br />
+      Abonniere <a href="#">[hier:]</a> unseren<br />
       Newsletter.
     </div>
     <div class="fc-links">
       <div class="fc-impressum">
         &copy; 2022 [fi:]<br/>
-        <a href="neu.html">impressum</a> | <a href="neu.html">datenschutz</a> | <a href="neu.html">wiederrufsbelehrung</a>
+        <a href="#">impressum</a> | <a href="#">datenschutz</a> | <a href="#">wiederrufsbelehrung</a>
       </div>
       <div class="fc-social">
-        <a href="neu.html"><img src="../assets/img/soundcloud.png"></a> <a href="neu.html"><img src="../assets/img/insta.png"></a> <a href="neu.html"><img src="../assets/img/facebook.png"></a>
+        <a href="#"><img src="../assets/img/soundcloud.png"></a> <a href="#"><img src="../assets/img/insta.png"></a> <a href="#"><img src="../assets/img/facebook.png"></a>
       </div>
     </div>
   </div>

@@ -2,8 +2,8 @@
   <div class="header">
     <HeaderVideo class="hc-video" />
     <img src="../assets/img/logo.png" class="hc-logo" />
-    <MenuComponent class="hc-menu" />
-    <HeaderCalendar class="hc-calendar" />
+    <MenuComponent :blog="blog" class="hc-menu" />
+    <HeaderCalendar v-if="blog" class="hc-calendar" />
   </div>
 </template>
 
@@ -18,7 +18,10 @@ export default {
     MenuComponent,
     HeaderVideo,
     HeaderCalendar
-},
+  },
+  props: {
+    blog: Boolean
+  }
 }
 </script>
 
@@ -51,7 +54,7 @@ export default {
   position: absolute;
   width: 50%;
   min-width: 400px;
-  bottom: 53px;
+  bottom: 52px;
   right: 0px;
 }
 p {

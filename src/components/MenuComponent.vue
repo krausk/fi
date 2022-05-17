@@ -1,12 +1,18 @@
 <template>
   <div class="menu">
     <ul>
-      <li><a href="neu.html" rel="noopener" class="aselected">NEU</a></li>
-      <li><a href="neu.html" rel="noopener">PROGRAMM</a></li>
-      <li><a href="neu.html" rel="noopener">SHOP</a></li>
-      <li><a href="neu.html" rel="noopener">ABOUT</a></li>
-      <li><a href="neu.html" rel="noopener">KONTAKT</a></li>
-      <li><a href="neu.html" rel="noopener"><img src="../assets/img/globe.png" class="symbol"></a></li>
+      <li>
+        <a v-if="blog" href="#" rel="noopener" class="aselected">NEU</a>
+        <a v-else href="#" rel="noopener">NEU</a>
+      </li>
+      <li>
+        <a v-if="blog" href="#" rel="noopener" @click.prevent="selectedPage ='Bar'">PROGRAMM</a>
+        <a v-else href="#" rel="noopener" class="aselected">PROGRAMM</a>
+      </li>
+      <li><a href="#" rel="noopener">SHOP</a></li>
+      <li><a href="#" rel="noopener">ABOUT</a></li>
+      <li><a href="#" rel="noopener">KONTAKT</a></li>
+      <li><a href="#" rel="noopener"><img src="../assets/img/globe.png" class="symbol"></a></li>
     </ul>
   </div>
 </template>
@@ -14,6 +20,9 @@
 <script>
 export default {
   name: 'MenuComponent',
+  props: {
+    blog: Boolean
+  }
 }
 </script>
 

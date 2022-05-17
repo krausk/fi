@@ -1,15 +1,17 @@
 <template>
   <div class="container">
-    <HeaderComponent />
-    <BodyComponent />
+    <HeaderComponent :blog="blog"/>
+    <BodyComponent  v-if="blog"/>
+    <ProgrammComponent v-else/>
     <FooterComponent />
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
-import BodyComponent from './components/BodyComponent.vue'
+import BodyComponent from './components/BlogComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
+import ProgrammComponent from './components/ProgrammComponent.vue'
 
 require('./assets/fonts/CartographCF/CartographCF-Light.woff')
 require('./assets/fonts/CartographCF/CartographCF-Light.woff2')
@@ -19,15 +21,20 @@ export default {
   components: {
     HeaderComponent,
     BodyComponent,
-    FooterComponent
-},
+    FooterComponent,
+    ProgrammComponent
+  },
+  data() {
+    return { blog: false }
+  }
 }
 </script>
 
 <style>
 @import './assets/main.css';
+
 .container {
-  margin: auto;
+  margin: 0;
   width: 100%;
   height: 100%;
 }
