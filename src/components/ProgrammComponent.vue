@@ -1,7 +1,8 @@
 <template>
   <div class="pc-body">
     <div class="pc-list">
-      <ul>
+      <img src="../assets/img/programm_text.png" class="pc-txtimg" />
+      <!-- <ul>
         <li>
           <ProgrammEntry 
           :startTime="'05 08 22 um 22:00 UTC+02'"
@@ -13,7 +14,7 @@
           :imgWidth="200"
           />
         </li>
-      </ul>
+      </ul> -->
    </div>
    <div class="pc-cal">
       <img src="../assets/img/program_cal.png" class="pc-img" />
@@ -22,13 +23,10 @@
 </template>
 
 <script>
-import ProgrammEntry from './ProgrammEntry.vue';
-
 export default {
     name: "ProgrammComponent",
     components: {
-    ProgrammEntry
-},
+    },
     props: {
         msg: String
     },
@@ -40,12 +38,16 @@ export default {
 .pc-body {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items:flex-start;
   height: 100%;
   width: 100%;
 }
 .pc-list {
+  position: relative;
+  left: 0px;
+  top: 0px;
   width: 50%;
+  text-align: left;
 }
 .pc-cal {
   position: relative;
@@ -53,6 +55,9 @@ export default {
   top: 0px;
   text-align: right;
   width: 50%;
+}
+.pc-txtimg {
+  width: 800px;
 }
 .pc-img {
   width: 600px;
