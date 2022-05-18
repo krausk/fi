@@ -1,17 +1,14 @@
 <template>
   <div class="container">
     <HeaderComponent :blog="blog"/>
-    <BodyComponent  v-if="blog"/>
-    <ProgrammComponent v-else/>
+    <router-view />
     <FooterComponent />
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
-import BodyComponent from './components/BlogComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
-import ProgrammComponent from './components/ProgrammComponent.vue'
 
 require('./assets/fonts/CartographCF/CartographCF-Light.woff')
 require('./assets/fonts/CartographCF/CartographCF-Light.woff2')
@@ -20,9 +17,7 @@ export default {
   name: 'App',
   components: {
     HeaderComponent,
-    BodyComponent,
     FooterComponent,
-    ProgrammComponent
   },
   data() {
     return { blog: false }

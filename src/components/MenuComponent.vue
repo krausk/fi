@@ -2,12 +2,12 @@
   <div class="menu">
     <ul>
       <li>
-        <a v-if="blog" href="#" rel="noopener" class="aselected">NEU</a>
-        <a v-else href="#" rel="noopener">NEU</a>
+        <router-link v-if="blog" to="/" rel="noopener" class="aselected">NEU</router-link>
+        <router-link v-else to="/" rel="noopener">NEU</router-link>
       </li>
       <li>
-        <a v-if="blog" href="#" rel="noopener" @click.prevent="selectedPage ='Bar'">PROGRAMM</a>
-        <a v-else href="#" rel="noopener" class="aselected">PROGRAMM</a>
+        <router-link v-if="blog" to="/programm" rel="noopener" @click.prevent="selectedPage ='Bar'">PROGRAMM</router-link>
+        <router-link v-else to="/programm" rel="noopener" class="aselected">PROGRAMM</router-link>
       </li>
       <li><a href="#" rel="noopener">SHOP</a></li>
       <li><a href="#" rel="noopener">ABOUT</a></li>

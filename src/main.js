@@ -1,4 +1,17 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
+import VueRouter from 'vue-router'
+import routes from './routes'
 
-createApp(App).mount('#app')
+Vue.use(VueRouter)
+
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(),
+  routes,
+})
+
+new Vue({
+    el: '#app',
+    router,
+    render: h => h(App)
+})
