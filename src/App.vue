@@ -26,7 +26,15 @@ export default {
   },
   data() {
     return { blog: false }
-  }
+  },
+  created() {
+    let urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('programm')) {
+      this.blog = false
+    } else {
+      this.blog = true
+    }
+  },
 }
 </script>
 
